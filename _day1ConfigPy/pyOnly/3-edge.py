@@ -54,7 +54,7 @@ configStaticRoute = [
     'ip route 10.72.0.0 255.255.0.0 200.0.0.72',
     'ip route 10.81.0.0 255.255.0.0 200.0.0.81',
     'ip route 10.82.0.0 255.255.0.0 200.0.0.82',
-    'ip route 10.72.0.0 255.255.0.0 10.72.72.4'
+    f'ip route 10.{monitorNumber}.0.0 255.255.0.0 10.{monitorNumber}.{monitorNumber}.4'
 ]
 
 ##Use only if routing will use OSPF
