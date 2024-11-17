@@ -91,7 +91,7 @@ print(r'Configurations Successful!!!')
 showRun = accessCLI.send_command('sh run')
 
 #create a text file for show run command
-with open(r'_3-edgeRouter.txt', 'w') as file:
+with open(r'_3-edgeRouter-shrun.txt', 'w') as file:
     file.write(showRun)
 
 #disconnect from device
