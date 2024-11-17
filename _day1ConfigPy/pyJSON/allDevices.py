@@ -504,24 +504,22 @@ accessCLI = ConnectHandler(**coreBabaInfo)
 #apply configurations for coreBABA
 print(r'Applying IP addresses...')
 accessCLI.send_config_set(configIPs)
-print(r'...Success!')
+print(r'...Success!' + '\n')
 
 print(r'Configuring DHCP...')
 accessCLI.send_config_set(configDHCP)
-print(r'...Success!')
+print(r'...Success!' + '\n')
 
 print(r'Configuring Switchport...')
 accessCLI.send_config_set(configPorts)
-print(r'...Success!')
+print(r'...Success!' + '\n')
 
 print(r'Reserving Camera IPs...')
 accessCLI.send_config_set(configCameras)
-print(r'...Success!')
+print(r'...Success!' + '\n')
 
 accessCLI.disconnect
-print(r'-----@ Configurations for COREBABA is Successful!!!')
-
-print(r' ')
+print(r'-----@ Configurations for COREBABA is Successful!!!' + '\n')
 
 #callManager
 print(r'@----- Connecting to CALLMANAGER')
@@ -530,38 +528,36 @@ accessCLI = ConnectHandler(**cucmInfo)
 #apply configurations for callManager
 print(r'Configuring Console Connection...')
 accessCLI.send_config_set(configCUCMConsole)
-print(r'...Success!')
+print(r'...Success!' + '\n')
 
 print(r'Configuring Analog Phones...')
 accessCLI.send_config_set(configAnalog)
-print(r'...Success!')
+print(r'...Success!' + '\n')
 
 for i in range(1,3):
     print(r'Configuring Ephones ' + str(i) + '/2')
     accessCLI.send_config_set(configEphone)
-print(r'...Success!')
+print(r'...Success!' + '\n')
 
 print(r'Configuring Video Calls...')
 accessCLI.send_config_set(configVideo)
-print(r'...Success!')
+print(r'...Success!' + '\n')
 
 print(r'Allowing Incoming Calls...')
 accessCLI.send_config_set(configIncoming)
-print(r'...Success!')
+print(r'...Success!' + '\n')
 
 print(r'Allowing Outgoing Calls...')
 accessCLI.send_config_set(configOutgoing)
-print(r'...Success!')
+print(r'...Success!' + '\n')
 
 print(r'Configuring IVRS...')
 accessCLI.send_config_set(configIVRS)
-print(r'...Success!')
+print(r'...Success!' + '\n')
 
 #disconnect from device
 accessCLI.disconnect
-print(r'-----@ Configurations for CALLMANAGER is Successful!!!')
-
-print(r' ')
+print(r'-----@ Configurations for CALLMANAGER is Successful!!!' + '\n')
 
 #edgeRouter
 print(r'@----- Connecting to EDGEROUTER')
@@ -570,19 +566,17 @@ accessCLI = ConnectHandler(**edgeRouterInfo)
 #apply configurations for edgeRouter
 print(r'Applying IP addresses')
 accessCLI.send_config_set(configIPsEDGE)
-print(r'...Success!')
+print(r'...Success!' + '\n')
 
 print(r'Configuring Static Routes')
 accessCLI.send_config_set(configStaticRoute)
-print(r'...Success!')
+print(r'...Success!' + '\n')
 
 accessCLI.disconnect
-print(r'-----@ Configurations for EDGEROUTER is Successful!!!')
-
-print(r' ')
+print(r'-----@ Configurations for EDGEROUTER is Successful!!!' + '\n')
 
 #Make ephone Numbers Appear, please
-print(r'@----- Finishing configurations')
+print(r'@----- Finishing configurations' + '\n')
 accessCLI = ConnectHandler(**cucmInfo)
 
 #apply configurations for callManager
@@ -592,7 +586,7 @@ for i in range(1,3):
 
 #disconnect from device
 accessCLI.disconnect
-print(r'-----@ Configurations Complete!!!')
+print(r'-----@ Configurations Complete!!!' + '\n')
 
 
 #test connection
