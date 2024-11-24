@@ -108,7 +108,7 @@ def evalInfo():
         r'Are all of these information correct (yes/no)? '
     )
     return output
-
+    
 def configSuccess():
     print(r'...Success!' + '\n')
 
@@ -139,6 +139,16 @@ else:
         isNo = bool(re.search(regexNo, needReInput))
         if isNo:
             promptDeviceInfo()
+
+# -verify device information
+with open('userDeviceInfo.json', 'r') as file:
+        userDeviceInfo = json.load(file)
+    
+monitorNumber = userDeviceInfo['monitorNumber']
+camera6MAC = userDeviceInfo['camera6MAC']
+camera8MAC = userDeviceInfo['camera8MAC']
+ephone1MAC = userDeviceInfo['ephone1MAC']
+ephone2MAC = userDeviceInfo['ephone2MAC']
             
 #   --OBTAIN DEVICE INFO--
 with open('deviceInfo.json', 'r') as file:
