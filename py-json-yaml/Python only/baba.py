@@ -46,7 +46,7 @@ ip_commands = [
     'no shut',
     f'ip add 10.{user_m}.50.4 255.255.255.0',
     'desc mgmtCCTV--configured-via-python',
-    'exit',
+    'exit'
 ]
 
 dhcp_commands = [
